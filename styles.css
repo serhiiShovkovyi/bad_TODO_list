@@ -1,0 +1,73 @@
+.fonts-and-color{
+    font-family: "Arial";
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #f1f1f1;
+}
+
+.dialog-add{
+    transition: 0.2s;
+}
+.border{
+    border: 1px solid lightgray;
+}
+.wh{
+    width: 20px;
+    height: 20px;
+}
+.clear{
+    float: right;
+}
+.container{
+    border-right: 0.5px solid lightgray;
+    border-left: 0.5px solid lightgray;
+    height: 100%;
+}
+.style-of-text{
+    font-size: 25px;
+    font-weight: 300;
+    font-family: "Al Bayan";
+}
+.absolute{
+
+    position: absolute;
+    z-index: 1;
+}
+li{
+    list-style: none;
+}
+.bordered{
+    display: block;
+    border: 1px solid lightgray;
+
+}
+.btn-advanced{
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid lightgray;
+    transition: 0.2s;
+}
+.btn-advanced:hover{
+    background-color: #038ED2;
+    color: #f1f1f1;
+}
+.m-custom{
+    margin: 10vh;
+}
+.todo-header{
+    color: #ABB9CD;
+    margin-top: 10px;
+}
+.logo-beauty{
+    color: orange;
+    font-family: "Segoe UI";
+    font-size: 20px;
+}
+.cancel:hover{
+    color:#f1f1f1;
+    background-color: red;
+}
+.done{
+    text-decoration: line-through;
+}

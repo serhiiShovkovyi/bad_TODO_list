@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar nav bg-dark navbar-expand-lg">
+      <span class="logo-beauty">MY</span><p class="navbar-brand fonts-and-color">ToDo List</p>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="add sidebar col-md-2 d-block w-100">
+          <span><p class="todo-header">Actions</p></span>
+          <hr />
+          <button id="add" class=" p-2 btn-advanced mt-2 ml-1">Add ToDo</button>
+          <button id="sort" class=" p-2  mt-2 ml-1" disabled>Sort ToDos</button>
+        </div>
+
+        
+
+
+
+        <div class="dialog-add shadow-lg m-custom absolute bg-light d-none w-50 border">
+          <a href="" class="m-2 clear c-black"><i><img class="wh" src="clear-button.svg" alt="Clear"></i></a>
+          <h4 class="m-2">Add todo item</h4>
+          <hr />
+          <form class="main ml-5 d-block">
+            <input type="text" class="name input m-2" placeholder="Name" pattern="[A-Za-z][0-9]" required /> <br />
+            <input type="text" class="desc input m-2" placeholder="Description" />
+            <div class="m-2">
+              <p>Priority</p>
+              <select name="Priority" class="priority">
+                <option value="one">Low</option>
+                <option value="two">Middle</option>
+                <option value="three">High</option>
+              </select>
+            </div>
+            <input
+                    type="datetime-local"
+                    class="input m-2 date"
+                    placeholder="Datetime"
+            />
+          </form>
+          <hr />
+          <div class="footer d-flex">
+            <button id="add-item" class="btn btn-advanced m-2 mr-0">Add</button>
+            <button class="btn btn-advanced cancel m-2 ml-0">Cancel</button>
+          </div>
+        </div>
+        <div class="col-md-8 list">
+          <div class="w-100 "><h3 class="todo-header">Your ToDo Items</h3></div>
+          <hr />
+          <ul class=" mt-3 list-of-elems"></ul>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="application/javascript" src="index.js"></script>
+  </body>
+</html>
