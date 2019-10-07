@@ -45,7 +45,7 @@ const deleteItem = event => {
   const id = event.target.getAttribute("key");
   console.log(id);
 
-  if (state.listOfItems.length === 1) {
+  if (state.listOfItems.length <=1) {
     state.listOfItems.splice(0);
   } else {
     state.listOfItems.splice(id, 1);
@@ -54,9 +54,8 @@ const deleteItem = event => {
   for (let i = 0; i < state.listOfItems.length; i++) {
     state.listOfItems[i].key = i;
     ul.children[i].key = i;
-    console.log("retrack");
   }
-  console.log(state.listOfItems);
+  state.listOfItems.sort((a,b)=>a.key - b.key);
   localStorage.setItem("0", JSON.stringify(state.listOfItems));
   ul.removeChild(document.querySelector(`[key="${id}"]`));
 };
@@ -65,12 +64,8 @@ const tickItem = event => {
   !state.listOfItems[id].checked
     ? (state.listOfItems[id].checked = true)
     : (state.listOfItems[id].checked = false);
-  for (let i = 0; i < state.listOfItems.length; i++) {
-    state.listOfItems[i].key = i;
-    ul.children[i].key = i;
-    console.log("retrack");
-  }
-  localStorage.setItem(0, JSON.stringify(state.listOfItems));
+
+  localStorage.setItem("0", JSON.stringify(state.listOfItems));
   ul.removeChild(document.querySelector(`p[key="${id}"]`));
   ul.innerHTML += renderItem(state.listOfItems[id]);
 };
@@ -131,7 +126,6 @@ console.log('add')
 
   if (
     nameInp.value.length > 0 &&
-    descInp.value.length > 0 &&
     dateTime.value.length > 0
   ) {
     console.log('add')
