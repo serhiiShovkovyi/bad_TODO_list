@@ -12,8 +12,14 @@
     />
   </head>
   <body>
-    <nav class="navbar nav bg-dark navbar-expand-lg">
-      <span class="logo-beauty">MY</span><p class="navbar-brand fonts-and-color">ToDo List</p>
+    <nav class="navbar nav bg-black navbar-expand-lg">
+      <div class="float-right logo d-flex">
+        <div class="blacked mr-adv">Todo</div>
+        <span class="background-two pl">List</span>
+      </div>
+      <form class="search d-flex">
+        <input type="text" id="search" class="search-inp" placeholder="Search" />
+      </form>
     </nav>
     <div class="container">
       <div class="row">
@@ -21,32 +27,101 @@
           <span><p class="todo-header">Actions</p></span>
           <hr />
           <button id="add" class=" p-2 btn-advanced mt-2 ml-1">Add ToDo</button>
-          <button id="sort" class=" p-2  mt-2 ml-1" disabled>Sort ToDos</button>
+          <button id="sort" class=" p-2 btn-advanced-sort mt-2 ml-1">Sort</button>
         </div>
-
-        
-
-
-
-        <div class="dialog-add shadow-lg m-custom absolute bg-light d-none w-50 border">
-          <a href="" class="m-2 clear c-black"><i><img class="wh" src="clear-button.svg" alt="Clear"></i></a>
-          <h4 class="m-2">Add todo item</h4>
+        <div
+          class="edit-dialog shadow-lg m-custom absolute bg-light d-none w-50 border"
+        >
+          <a href="" class="m-2 float-right exit"
+            ><img class="wh" src="clear-button.svg" alt="Clear"
+          /></a>
+          <h4 class="ml-2 todo-header">Edit todo item</h4>
           <hr />
           <form class="main ml-5 d-block">
-            <input type="text" class="name input m-2" placeholder="Name" pattern="[A-Za-z][0-9]" required /> <br />
-            <input type="text" class="desc input m-2" placeholder="Description" />
+            <input
+              type="text"
+              class="name-edit input m-2"
+              placeholder="Name"
+              required
+            />
+            <span class="error d-none"
+              ><img
+                src="round-error-symbol.svg"
+                width="15"
+                height="15"
+                alt="Error"
+              />
+              Invalid name</span
+            >
+            <br />
+            <input
+              type="text"
+              class="desc-edit input m-2"
+              placeholder="Description"
+            />
             <div class="m-2">
               <p>Priority</p>
-              <select name="Priority" class="priority">
-                <option value="one">Low</option>
-                <option value="two">Middle</option>
-                <option value="three">High</option>
+              <select name="Priority" class="priority-edit">
+                <option value="1">Low</option>
+                <option value="2">Middle</option>
+                <option value="3">High</option>
               </select>
             </div>
             <input
-                    type="datetime-local"
-                    class="input m-2 date"
-                    placeholder="Datetime"
+              type="datetime-local"
+              class="input m-2 date-edit"
+              placeholder="Datetime"
+              required
+            />
+          </form>
+          <hr />
+          <div class="footer d-flex">
+            <button class="btn-advanced btn-edit m-2 ml-0">Edit</button>
+          </div>
+        </div>
+        <div
+          class="dialog-add shadow-lg m-custom absolute bg-light d-none w-50 border"
+        >
+          <a href="" class="m-2 clear c-black"
+            ><i><img class="wh" src="clear-button.svg" alt="Clear"/></i
+          ></a>
+          <h4 class="m-2">Add todo item</h4>
+          <hr />
+          <form class="main ml-5 d-block">
+            <input
+              type="text"
+              class="name input m-2"
+              placeholder="Name"
+              required
+            />
+            <span class="error-d d-none"
+              ><img
+                src="round-error-symbol.svg"
+                width="15"
+                height="15"
+                alt="Error"
+              />
+              Invalid name</span
+            >
+            <br />
+            <input
+              type="text"
+              class="desc input m-2"
+              placeholder="Description"
+            />
+            <div class="m-2">
+              <p>Priority</p>
+              <select name="Priority" class="priority">
+                <option value="1">Low</option>
+                <option value="2">Middle</option>
+                <option value="3">High</option>
+              </select>
+            </div>
+            <input
+              type="datetime-local"
+              class="input m-2 date"
+              placeholder="Datetime"
+              required
             />
           </form>
           <hr />
@@ -62,7 +137,6 @@
         </div>
       </div>
     </div>
-
 
     <script type="application/javascript" src="index.js"></script>
   </body>

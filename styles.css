@@ -1,3 +1,4 @@
+
 .fonts-and-color{
     font-family: "Arial";
     font-weight: 400;
@@ -70,4 +71,37 @@ li{
 }
 .done{
     text-decoration: line-through;
+}
+.background-two{
+    background-color: #F89100;
+    border-radius: 3px;
+    color: black;
+}
+.blacked{
+    color: #f1f1f1;
+}
+.bg-black{
+    background-color: #000;
+}
+.mr-adv{
+    margin-right: 3px;
+}
+.pl{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.logo{
+    font-family: Helvetica;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.btn-advanced-sort{
+    background-color: #ABB9CD;
+    transition: 0.2s;
+    width: 100%;
+    color: #1B1B1B;
+}
+.btn-advanced-sort:hover{
+    background-color: green;
+    color: #f1f1f1;
 }
